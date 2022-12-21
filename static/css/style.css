@@ -1,0 +1,156 @@
+/* Import Google font - Poppins */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background-image: linear-gradient(to right top, #d16ba5, #c9609e, #c25596, #ba498f, #b23d88, #aa4ea2, #9c5eba, #876fcf, #4a99f4, #00beff, #00dfff, #5ffbf1);
+
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    height: 670px;
+    background: linear-gradient(to top right, #000066 16%, #ccff99 100%);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+    font-size: 3rem;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+}
+
+.container .form {
+    margin-top: 10px;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input-box label {
+    color: black;
+}
+
+.form :where(.input-box input,
+.select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: black;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .gender-box {
+    margin-top: 20px;
+}
+
+.gender-box h3 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: -23px;
+}
+
+.form :where(.gender-option,
+.gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+}
+
+.form .gender {
+    column-gap: 5px;
+}
+
+.gender input {
+    color: black;
+}
+
+.form :where(.gender input,
+.gender label) {
+    cursor: pointer;
+}
+
+.gender label {
+    color: black;
+}
+
+.address :where(input,
+.select-box) {
+    margin-top: 5px;
+}
+
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 1rem;
+}
+
+.form button {
+    height: 50px;
+    margin-left: 4rem;
+    width: 600px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    background: black;
+}
+
+.form button:hover {
+    background: rgb(88, 56, 250);
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+    .form :where(.gender-option,
+    .gender) {
+        row-gap: 15px;
+    }
+}
