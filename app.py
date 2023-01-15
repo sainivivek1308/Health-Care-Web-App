@@ -11,12 +11,12 @@ app = Flask(__name__)
 # create a path of website
 @app.route('/')
 def home():
-    return render_template(".\index.html")
+    return render_template("index.html")
 
 
 @app.route('/index')
 def index():
-    return render_template(".\index.html")
+    return render_template("index.html")
 #id="check-male"
 
 @app.route("/diabetes")
@@ -48,7 +48,7 @@ def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 6):
         loaded_model = load(
-            r'C:\Users\VIVEK SAINI\OneDrive\Desktop\health care\diabetes_model.pkl')
+            r'.\models\diabetes_model.pkl')
         result = loaded_model.predict(to_predict)
     return result[0]
 
@@ -57,7 +57,7 @@ def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 6):
         loaded_model = load(
-            r'C:\Users\VIVEK SAINI\OneDrive\Desktop\health care\models\diabetes_model.pkl')
+            r'.\models\diabetes_model.pkl')
         result1 = loaded_model.predict(to_predict)
     return result1[0]
 
@@ -66,7 +66,7 @@ def ValuePredictorkidney(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 7):
         loaded_model = load(
-            r'C:\Users\VIVEK SAINI\OneDrive\Desktop\health care\models\kidney_model.pkl.pkl')
+            r'.\models\kidney_model.pkl.pkl')
         result2 = loaded_model.predict(to_predict)
     return result2[0]
 
@@ -75,7 +75,7 @@ def ValuePredictorliver(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 7):
         loaded_model = load(
-            r'C:\Users\VIVEK SAINI\OneDrive\Desktop\health care\models\liver_model.pkl')
+            r'.\models\liver_model.pkl')
         result3 = loaded_model.predict(to_predict)
     return result3[0]
 
@@ -84,7 +84,7 @@ def ValuePredictorheart(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 7):
         loaded_model = load(
-            r'C:\Users\VIVEK SAINI\OneDrive\Desktop\health care\models\heart_model.pkl')
+            r'.\models\heart_model.pkl')
         result4 = loaded_model.predict(to_predict)
     return result4[0]
 
@@ -93,7 +93,7 @@ def ValuePredictorcancer(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 5):
         loaded_model = load(
-            r'C:\Users\VIVEK SAINI\OneDrive\Desktop\health care\models\cancer_model.pkl')
+            r'.\models\cancer_model.pkl')
         result5 = loaded_model.predict(to_predict)
     return result5[0]
 
