@@ -66,7 +66,7 @@ def ValuePredictorkidney(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 7):
         loaded_model = load(
-            r'.\models\kidney_model.pkl.pkl')
+            r'.\models\kidney_model.pkl')
         result2 = loaded_model.predict(to_predict)
     return result2[0]
 
